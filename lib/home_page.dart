@@ -108,17 +108,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                   ));
                 },
-                child: InkWell(
-                  splashColor: Colors.redAccent.shade200,
-                  borderRadius: BorderRadius.circular(15),
-                  onTap: (){},
-                  child: Image.asset(
-                    "assets/mainPage/foodForRectangle/burger.png",
-                  ),
-                ),
+                child: Image.asset("assets/mainPage/foodForRectangle/burger.png")
               ),
-              Image.asset(
-                "assets/mainPage/foodForRectangle/pizza.png",
+              InkWell(
+                splashColor: Colors.redAccent.shade200,
+                borderRadius: BorderRadius.circular(15),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return ChoosePage();
+                    },
+                  ));
+                },
+                child: Image.asset(
+                  "assets/mainPage/foodForRectangle/pizza.png",
+                ),
               ),
               Image.asset(
                 "assets/mainPage/foodForRectangle/pasta.png",
