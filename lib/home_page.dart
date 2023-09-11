@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:uiux_design/choose_page.dart';
 
@@ -105,12 +104,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return ChoosePage(); // Замість SecondPage() вставте віджет вашої наступної сторінки.
+                      return ChoosePage();
                     },
                   ));
                 },
-                child: Image.asset(
-                  "assets/mainPage/foodForRectangle/burger.png",
+                child: InkWell(
+                  splashColor: Colors.redAccent.shade200,
+                  borderRadius: BorderRadius.circular(15),
+                  onTap: (){},
+                  child: Image.asset(
+                    "assets/mainPage/foodForRectangle/burger.png",
+                  ),
                 ),
               ),
               Image.asset(
@@ -137,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 "See more...",
                 style: TextStyle(color: Colors.blue),
               ),
-              SizedBox(height: 3), // Додайте простір між текстом і лінією
+              SizedBox(height: 3),
               Container(
                 height: 2, // Товщина лінії
                 width: 100, // Довжина лінії
